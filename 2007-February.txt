@@ -1,0 +1,33 @@
+From John.Andrews at ga-asi.com  Mon Feb  5 21:48:53 2007
+From: John.Andrews at ga-asi.com (Andrews, John)
+Date: Mon, 5 Feb 2007 12:48:53 -0800
+Subject: [Taspring-linux-dev] Introduction and Quick Request
+Message-ID: <5209E3CBD360A5439026631196FC97566D40BC@RSG-EVS1.rsg.ga-asi.com>
+
+My name is John, aka QMan, and I've been working on a Spring AI for a
+while now.  In working on this, I've stumbled on a minor issue:
+
+The engine only assigns a YardMap to units classified as a "Factory" or
+"Building", however, units such as Metal Extractors (classified as
+"MetalExtractor") and Nano Towers (classified as "Builder" aren't
+classified as either of these types, and as such, are given a fully
+transparent (non-blocking) yardmap.  This causes some weird issues for
+the CanBuildAt function in AICallback.  Since these buildings have no
+blocking yardmap, the CanBuildAt function returns true when something
+tries to build on top of one of these buildings, and the Construction
+Unit attempts to wait for the non-blocking building to move out of the
+way (since it thinks it is a mobile unit).  I propose a simple fix to
+this, as detailed below:
+
+In UnitDefHandler.cpp @ line 576
+
+Change line:
+if(ud.type=="Building" || ud.type=="Factory"){
+
+To:
+if(ud.speed == 0){
+
+
+Thanks!
+
+

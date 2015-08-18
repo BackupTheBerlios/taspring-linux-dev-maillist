@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Taspring-linux-dev] Introduction and Quick Request
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/taspring-linux-dev/2007-February/index.html" >
+   <LINK REL="made" HREF="mailto:taspring-linux-dev%40lists.berlios.de?Subject=Re%3A%20%5BTaspring-linux-dev%5D%20Introduction%20and%20Quick%20Request&In-Reply-To=%3C5209E3CBD360A5439026631196FC97566D40BC%40RSG-EVS1.rsg.ga-asi.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Taspring-linux-dev] Introduction and Quick Request</H1>
+    <B>Andrews, John</B> 
+    <A HREF="mailto:taspring-linux-dev%40lists.berlios.de?Subject=Re%3A%20%5BTaspring-linux-dev%5D%20Introduction%20and%20Quick%20Request&In-Reply-To=%3C5209E3CBD360A5439026631196FC97566D40BC%40RSG-EVS1.rsg.ga-asi.com%3E"
+       TITLE="[Taspring-linux-dev] Introduction and Quick Request">John.Andrews at ga-asi.com
+       </A><BR>
+    <I>Mon Feb  5 21:48:53 CET 2007</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#5">[ date ]</a>
+              <a href="thread.html#5">[ thread ]</a>
+              <a href="subject.html#5">[ subject ]</a>
+              <a href="author.html#5">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>My name is John, aka QMan, and I've been working on a Spring AI for a
+while now.  In working on this, I've stumbled on a minor issue:
+
+The engine only assigns a YardMap to units classified as a &quot;Factory&quot; or
+&quot;Building&quot;, however, units such as Metal Extractors (classified as
+&quot;MetalExtractor&quot;) and Nano Towers (classified as &quot;Builder&quot; aren't
+classified as either of these types, and as such, are given a fully
+transparent (non-blocking) yardmap.  This causes some weird issues for
+the CanBuildAt function in AICallback.  Since these buildings have no
+blocking yardmap, the CanBuildAt function returns true when something
+tries to build on top of one of these buildings, and the Construction
+Unit attempts to wait for the non-blocking building to move out of the
+way (since it thinks it is a mobile unit).  I propose a simple fix to
+this, as detailed below:
+
+In UnitDefHandler.cpp @ line 576
+
+Change line:
+if(ud.type==&quot;Building&quot; || ud.type==&quot;Factory&quot;){
+
+To:
+if(ud.speed == 0){
+
+
+Thanks!
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#5">[ date ]</a>
+              <a href="thread.html#5">[ thread ]</a>
+              <a href="subject.html#5">[ subject ]</a>
+              <a href="author.html#5">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/taspring-linux-dev">More information about the Taspring-linux-dev
+mailing list</a><br>
+</body></html>

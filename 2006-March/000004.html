@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Taspring-linux-dev] Getting the AI to tick...
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/taspring-linux-dev/2006-March/index.html" >
+   <LINK REL="made" HREF="mailto:taspring-linux-dev%40lists.berlios.de?Subject=Re%3A%20%5BTaspring-linux-dev%5D%20Getting%20the%20AI%20to%20tick...&In-Reply-To=%3C440E3639.5030305%40sympatico.ca%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Taspring-linux-dev] Getting the AI to tick...</H1>
+    <B>Toby Haynes</B> 
+    <A HREF="mailto:taspring-linux-dev%40lists.berlios.de?Subject=Re%3A%20%5BTaspring-linux-dev%5D%20Getting%20the%20AI%20to%20tick...&In-Reply-To=%3C440E3639.5030305%40sympatico.ca%3E"
+       TITLE="[Taspring-linux-dev] Getting the AI to tick...">thaynes at sympatico.ca
+       </A><BR>
+    <I>Wed Mar  8 02:41:13 CET 2006</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#4">[ date ]</a>
+              <a href="thread.html#4">[ thread ]</a>
+              <a href="subject.html#4">[ subject ]</a>
+              <a href="author.html#4">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>I've compiled up spring from SVN without a problem and I can start, play 
+the Random Enemies script without issue (apart from being thoroughly 
+pasted by the Korgoths :-) ). But despite much googling around, I can't 
+work out how to make the AI actually work.
+
+This is an AMD64 box btw running Ubuntu Breezy.
+
+I've been trying to get the JCAI up and running. It complained about 
+various files being absent, such as xtapev7.cfg. Having found a copy of 
+xtapev7.cfg in the AAI 0.55 release, it then complained about unexpected 
+characters like '.' - it would complain about lines like
+
+MIN_EFFICIENCY 0.1
+
+So I went through the xtapev7.cfg removing all the floating point 
+numbers (rounding them down to the nearest integer). Still nothing - 
+when I try and start the game using an AI script, it complains
+
+Log started on: Tuesday, March 07, day 066 of 2006.
+The time is 08:07 PM.
+Running mod xtapev3.sd7 on map SmallDivide.smf
+No sideinfo node found in config file
+MapInfo: 16x16, GameStateInfo: 8x8
+
+Extractor Radius: 25.000000, mapblockw=6, metalblockw=6
+Blocks: 16x16, Numspots=25, AverageProduction=78.693161
+No info for side of CORCOM
+
+And nothing seems to happen after that - I can see a Red Commander in 
+the bottom right of the map if I wander over there but he's not doing 
+very much. The other AIs seem to provide similar behaviour (although the 
+NTAI will pursue me if I wander into range, he won't build anything...).
+
+So - I must be screwing up somewhere. If someone could please explain 
+how to get an AI game running, that would be great :-)
+
+Thanks,
+Toby Haynes
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#4">[ date ]</a>
+              <a href="thread.html#4">[ thread ]</a>
+              <a href="subject.html#4">[ subject ]</a>
+              <a href="author.html#4">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/taspring-linux-dev">More information about the Taspring-linux-dev
+mailing list</a><br>
+</body></html>

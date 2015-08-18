@@ -1,0 +1,47 @@
+From thaynes at sympatico.ca  Wed Mar  8 02:41:13 2006
+From: thaynes at sympatico.ca (Toby Haynes)
+Date: Tue, 07 Mar 2006 20:41:13 -0500
+Subject: [Taspring-linux-dev] Getting the AI to tick...
+Message-ID: <440E3639.5030305@sympatico.ca>
+
+I've compiled up spring from SVN without a problem and I can start, play 
+the Random Enemies script without issue (apart from being thoroughly 
+pasted by the Korgoths :-) ). But despite much googling around, I can't 
+work out how to make the AI actually work.
+
+This is an AMD64 box btw running Ubuntu Breezy.
+
+I've been trying to get the JCAI up and running. It complained about 
+various files being absent, such as xtapev7.cfg. Having found a copy of 
+xtapev7.cfg in the AAI 0.55 release, it then complained about unexpected 
+characters like '.' - it would complain about lines like
+
+MIN_EFFICIENCY 0.1
+
+So I went through the xtapev7.cfg removing all the floating point 
+numbers (rounding them down to the nearest integer). Still nothing - 
+when I try and start the game using an AI script, it complains
+
+Log started on: Tuesday, March 07, day 066 of 2006.
+The time is 08:07 PM.
+Running mod xtapev3.sd7 on map SmallDivide.smf
+No sideinfo node found in config file
+MapInfo: 16x16, GameStateInfo: 8x8
+
+Extractor Radius: 25.000000, mapblockw=6, metalblockw=6
+Blocks: 16x16, Numspots=25, AverageProduction=78.693161
+No info for side of CORCOM
+
+And nothing seems to happen after that - I can see a Red Commander in 
+the bottom right of the map if I wander over there but he's not doing 
+very much. The other AIs seem to provide similar behaviour (although the 
+NTAI will pursue me if I wander into range, he won't build anything...).
+
+So - I must be screwing up somewhere. If someone could please explain 
+how to get an AI game running, that would be great :-)
+
+Thanks,
+Toby Haynes
+
+
+

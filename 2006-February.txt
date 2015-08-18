@@ -1,0 +1,114 @@
+From sheuer at member.fsf.org  Mon Feb 27 03:16:39 2006
+From: sheuer at member.fsf.org (Stephen Heuer)
+Date: Sun, 26 Feb 2006 20:16:39 -0600
+Subject: [Taspring-linux-dev] New
+Message-ID: <430e0a30602261816u3eeef8b2m68a866877fb5927d@mail.gmail.com>
+
+Hey,
+
+i just joined the list. I'm looking to help out with testing and
+possibly help out with some of the coding.
+
+I'm running a AMD 64 X2 machine with Gentoo on it.
+
+I look forward to helping out.
+--
+Stephen Heuer
+http://www.aragoth.org/sheuer
+
+
+From andreas.pokorny at gmail.com  Mon Feb 27 14:54:48 2006
+From: andreas.pokorny at gmail.com (Andreas Pokorny)
+Date: Mon, 27 Feb 2006 14:54:48 +0100
+Subject: [Taspring-linux-dev] New
+In-Reply-To: <430e0a30602261816u3eeef8b2m68a866877fb5927d@mail.gmail.com>
+References: <430e0a30602261816u3eeef8b2m68a866877fb5927d@mail.gmail.com>
+Message-ID: <e8be73390602270554i5c3f8529s@mail.gmail.com>
+
+2006/2/27, Stephen Heuer <sheuer at member.fsf.org>:
+> Hey,
+>
+> i just joined the list. I'm looking to help out with testing and
+> possibly help out with some of the coding.
+>
+> I'm running a AMD 64 X2 machine with Gentoo on it.
+>
+> I look forward to helping out.
+
+We do not yet use this list. Most discussion takes place in
+Taspring-linux at lolut.utbm.info
+http://lolut.utbm.info/cgi-bin/mailman/listinfo/taspring-linux
+
+There were discussion about moving everything here. Nothing came out
+of that. Nonetheless nearly all devs are supposed to be subscribed here.
+
+You can also meet some of the people on IRC: #taspring on irc.freenode.net
+
+Regardas
+Andreas Pokorny
+
+
+From fgingat at gmail.com  Tue Feb 28 23:33:20 2006
+From: fgingat at gmail.com (Florent Gingat)
+Date: Tue, 28 Feb 2006 23:33:20 +0100
+Subject: [Taspring-linux-dev] Thanks for this port .. and hello everyone
+Message-ID: <4404CFB0.3090307@gmail.com>
+
+Hello
+
+
+ First thanks for this good work...
+
+ sorry if u misspost or if this question have already been answered but
+i've compiled from svn with a gentoo ebuild from Berlios .. all is right
+but when i want to launch spring with my normal user or with root it
+complain about missing Armor.txt
+
+Have any clue ?
+
+Thanks in advance
+Regards , Florent Gingat
+
+
+From meheschmid at gmx.ch  Tue Feb 28 22:53:00 2006
+From: meheschmid at gmx.ch (Michael Schmid)
+Date: Tue, 28 Feb 2006 22:53:00 +0100
+Subject: [Taspring-linux-dev] Thanks for this port .. and hello everyone
+In-Reply-To: <4404CFB0.3090307@gmail.com>
+References: <4404CFB0.3090307@gmail.com>
+Message-ID: <4404C63C.8030806@gmx.ch>
+
+Hi. Well, refer to my last two posts on gentoo.org:
+http://forums.gentoo.org/viewtopic-t-410834-start-50.html.
+
+I'm pretty sure this problem is caused by you not having the new mod
+files. And there's also the second problem with the loading screen pictures.
+You can fix both manually for now, I'll update the ebuild as soon as I can.
+
+
+
+Florent Gingat wrote:
+> Hello
+>
+>
+>  First thanks for this good work...
+>
+>  sorry if u misspost or if this question have already been answered but
+> i've compiled from svn with a gentoo ebuild from Berlios .. all is right
+> but when i want to launch spring with my normal user or with root it
+> complain about missing Armor.txt
+>
+> Have any clue ?
+>
+> Thanks in advance
+> Regards , Florent Gingat
+> _______________________________________________
+> Taspring-linux-dev mailing list
+> Taspring-linux-dev at lists.berlios.de
+> http://lists.berlios.de/mailman/listinfo/taspring-linux-dev
+>
+>
+>   
+
+
+
